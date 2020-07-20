@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start" : "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "node ./bin/www",
-    "client": "cd client && npm start"
+    "client": "cd client && npm start",
+    "seed": "cd scripts && node seedDB"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,6 +15,7 @@
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
+    "mongoose": "^5.9.25",
     "morgan": "~1.9.1"
   },
   "devDependencies": {
