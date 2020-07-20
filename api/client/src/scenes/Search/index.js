@@ -47,7 +47,7 @@ API.addBook(book);
 
 
             <h3>Search Results:</h3>
-            <ul>
+            <ul style={{listStyle : "none"}}>
             {searchList.map((element,index) => {
                 return <li key={index}><Book isSearch={true} saveBook={saveBook} title={element.volumeInfo.title} thumbnail={element.volumeInfo.imageLinks.smallThumbnail} description={element.volumeInfo.description}
                 authors={element.volumeInfo.authors} link={element.volumeInfo.canonicalVolumeLink}/></li>
