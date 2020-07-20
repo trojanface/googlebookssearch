@@ -8,6 +8,7 @@ export default {
         return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
     },
     addBook: function (book) {
+        console.log(book.description)
         let authorReturn = "";
         if (book.authors !== undefined) {
             console.log("true")
@@ -20,7 +21,7 @@ export default {
             console.log("false")
             authorReturn = "Unknown"
         }
-        return axios.post('/api/books',{title: book.title, author: authorReturn, synopsis: book.description, link: book.link, image: book.image})
+        return axios.post('/api/books',{title: book.title, author: authorReturn, synopsis: book.description, link: book.link, image: book.thumbnail})
     },
     deleteBook: function (id) {
         return axios.delete(`/api/books/${id}`)

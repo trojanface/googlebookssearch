@@ -18,7 +18,7 @@ module.exports = {
   create: function(req, res) {
    // console.log(req.body.title)
     db.Book
-      .create({title: req.body.title, author: req.body.author, synopsis: req.body.description, link: req.body.link, image: req.body.image})
+      .create({title: req.body.title, author: req.body.author, synopsis: req.body.synopsis, link: req.body.link, image: req.body.image})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
       console.log("book added");

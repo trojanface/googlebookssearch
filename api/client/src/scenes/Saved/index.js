@@ -29,7 +29,7 @@ export default function Saved() {
         <div>
             <MenuBar />
             <div className="container">
-            <h1>Your Saved Books</h1>
+            <h1>Your Saved Tomes</h1>
             <ul>
             {bookList.map((element,index) => {
                 return <li key={index}><Book id={element._id} isSearch={false} deleteBook={deleteBook} title={element.title} thumbnail={element.image} description={element.synopsis}
