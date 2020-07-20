@@ -11,7 +11,7 @@ export default function Book(props) {
   <div className="row g-0">
     <div className="col-md-4">
         <div>
-      <img src={props.thumbnail}  alt={`An image of ${props.title}`} />
+      <img src={props.thumbnail}  alt={`${props.title}`} />
       </div>
       <div>
       <button className="btn btn-primary mt-2" onClick={props.isSearch ? () => {props.saveBook(props)} :  () => {props.deleteBook(props)}}>{props.isSearch ? "Save to your list" : "Remove from list"}</button>
@@ -22,7 +22,7 @@ export default function Book(props) {
         <h5 className="card-title">{props.title}</h5>
         <p className="card-text">{props.authors ? ` ${props.authors.map((element, index) => {return element })}`: " Unknown"}</p>
         <p className="card-text">{props.description}</p>
-        <h5><a target="_blank" href={props.link}>View here</a></h5>
+        <h5><a target="_blank" rel="noopener noreferrer" href={props.link}>View here</a></h5>
         
       </div>
     </div>

@@ -34,12 +34,12 @@ API.addBook(book);
         <div>
             <MenuBar />
             <div className="container">
-            <div class="mb-3">
+            <div className="mb-3">
             <form onSubmit={searchGoogle}>
   <h1>Find a hefty tome</h1>
-  <input type="text" class="form-control" value={searchTerm} onChange={updateTerm} placeholder="Search by title"></input>
-  <div class="col-auto">
-  <button type="submit" class="btn btn-primary mt-2 mb-3">Search</button>
+  <input type="text" className="form-control" value={searchTerm} onChange={updateTerm} placeholder="Search by title"></input>
+  <div className="col-auto">
+  <button type="submit" className="btn btn-primary mt-2 mb-3">Search</button>
   </div>
   </form>
 </div>
